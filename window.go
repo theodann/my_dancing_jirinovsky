@@ -6,18 +6,22 @@ import (
 	"image/color"
 )
 
-type window struct{
+type window struct {
 	jirik Jirik
-	triangle Triangle
+	triangles Triangles
 }
 
 type Jirik struct {
-	x, y *image.Point
+	pic *ebiten.Image
 }
 
-type Triangle struct {
-	way int
-	point *image.Point
+type Triangles struct {
+	pic []ebiten.Image
+}
+
+type O struct {
+	pic *ebiten.Image
+	x, y int
 }
 
 func newWindow() *window {
@@ -30,6 +34,10 @@ func newWindow() *window {
 }
 
 func (w *window) Update() {
+}
+
+func drawJirik(screen *ebiten.Image) {
+	screen.
 }
 
 func (w *window) Draw(screen *ebiten.Image) {
